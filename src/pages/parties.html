@@ -1,0 +1,98 @@
+---
+slug: parties
+title: Parties & Events
+description: Book a bowling party at Highland Park Lanes in Greeley, CO. $75 per lane for 2 hours of unlimited bowling, up to 6 people per lane, shoes included.
+---
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Parties</span>
+        <h1>Parties &amp; Events</h1>
+        <p>$75 per lane for 2 hours of unlimited bowling — up to 6 people per lane, shoes included.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#book">Book a party</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div class="stack">
+          <article class="card card--accent" aria-labelledby="info-title">
+            <h2 id="info-title" class="card__title">Party Information</h2>
+            <p class="price">$75 <small>per lane for 2 hours of unlimited bowling</small></p>
+            <ul class="check-list">
+              <li>Up to 6 people per lane</li>
+              <li>Shoes included</li>
+            </ul>
+            <hr class="divider">
+            <p>No outside food or drink is permitted, with the exception of dessert foods (cake, ice cream, etc.). Desserts are permitted with party reservations only.</p>
+            <p class="mb-0">Parties of 4 lanes or more are required to put down a <strong>$140 non-refundable deposit</strong> that will go towards your final bill.</p>
+          </article>
+
+          <article class="card card--cosmic" aria-labelledby="cosmic-title">
+            <span class="eyebrow eyebrow--cosmic">Lights down, music up</span>
+            <h2 id="cosmic-title" class="card__title">Cosmic Times</h2>
+            <ul class="check-list">
+              <li><strong>Friday</strong> – 9pm – 11pm</li>
+              <li><strong>Saturday</strong> – Noon – 11pm</li>
+            </ul>
+            <p class="note mt-1 mb-0">*Subject to change based on events, tournaments, leagues, etc.</p>
+          </article>
+        </div>
+
+        <form class="form-card" id="book" data-form action="{{formEndpoint}}" method="post" data-success="Success! We’ll email your confirmation once your lanes are reserved." aria-labelledby="book-title">
+          <input type="hidden" name="form" value="Party Booking">
+          <h2 id="book-title">Book a party</h2>
+          <div class="fineprint">
+            <p>Filling out this form does not guarantee your reservation. You must receive a confirmation email in order to have a reserved lane. If you do not receive confirmation within 48 hours, please call us at <a href="{{phoneHref}}">(970) 330-2695</a>.</p>
+            <ul>
+              <li>All reservations must pay party/event price regardless of any deals/specials.</li>
+              <li>Reservations must be 48 hours in advance.</li>
+              <li>Confirmations are manual, expect a response within 24 hours of your submission.</li>
+            </ul>
+            <p class="mt-1 mb-0"><span class="req" aria-hidden="true">*</span> Required</p>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="pt-name">Full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="pt-name" name="full_name" type="text" autocomplete="name" required aria-describedby="pt-name-error">
+              <p class="field__error" id="pt-name-error"></p>
+            </div>
+            <div class="field">
+              <label for="pt-phone">Phone number <span class="req" aria-hidden="true">*</span></label>
+              <input id="pt-phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9()+.\- ]{7,20}" aria-describedby="pt-phone-error">
+              <p class="field__error" id="pt-phone-error"></p>
+            </div>
+            <div class="field">
+              <label for="pt-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="pt-email" name="email" type="email" autocomplete="email" required aria-describedby="pt-email-error">
+              <p class="field__error" id="pt-email-error"></p>
+            </div>
+            <div class="field">
+              <label for="pt-lanes">How many lanes? <span class="req" aria-hidden="true">*</span></label>
+              <input id="pt-lanes" name="lanes" type="number" inputmode="numeric" min="1" max="40" required aria-describedby="pt-lanes-error">
+              <p class="field__error" id="pt-lanes-error"></p>
+            </div>
+            <div class="field">
+              <label for="pt-date">Date of party <span class="req" aria-hidden="true">*</span></label>
+              <input id="pt-date" name="date" type="date" required aria-describedby="pt-date-error">
+              <p class="field__error" id="pt-date-error"></p>
+            </div>
+            <div class="field">
+              <label for="pt-time">What time? <span class="req" aria-hidden="true">*</span></label>
+              <input id="pt-time" name="time" type="time" required aria-describedby="pt-time-error">
+              <p class="field__error" id="pt-time-error"></p>
+            </div>
+            <div class="field span-2">
+              <label for="pt-questions">Questions or concerns?</label>
+              <textarea id="pt-questions" name="questions" rows="4" aria-describedby="pt-questions-error"></textarea>
+              <p class="field__error" id="pt-questions-error"></p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </div>
+          <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+        </form>
+      </div>
+    </section>
