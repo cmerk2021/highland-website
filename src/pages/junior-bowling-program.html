@@ -1,0 +1,76 @@
+---
+slug: junior-bowling-program
+title: Junior Bowling Program
+description: Junior bowling at Highland Park Lanes in Greeley, CO. Starts September 12th at 9am, $10 per week. No team? We'll find one for you.
+---
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Leagues</span>
+        <h1>Junior Bowling</h1>
+        <p>If you do not already have a team, we will find a team for you!</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#signup">Sign up now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split">
+        <div>
+          <h2>Program details</h2>
+          <dl class="facts">
+            <div><dt>Start date</dt><dd>September 12th</dd></div>
+            <div><dt>When</dt><dd>9am</dd></div>
+            <div><dt>Where</dt><dd>Highland Park Lanes</dd></div>
+            <div><dt>How much</dt><dd>$10 per week</dd></div>
+          </dl>
+          <p class="lead mt-2">If you do not already have a team, we will find a team for you!</p>
+        </div>
+
+        <form class="form-card" id="signup" data-form action="{{formEndpoint}}" method="post" data-success="Thanks for submitting!" aria-labelledby="signup-title">
+          <input type="hidden" name="form" value="Junior Bowling Sign Up">
+          <h2 id="signup-title">Sign up now!</h2>
+          <p class="fineprint mb-0">Fields marked <span class="req" aria-hidden="true">*</span><span class="visually-hidden">with an asterisk</span> are required.</p>
+          <div class="form-grid">
+            <div class="field">
+              <label for="jr-child">Child’s full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="jr-child" name="child_name" type="text" required aria-describedby="jr-child-error">
+              <p class="field__error" id="jr-child-error"></p>
+            </div>
+            <div class="field">
+              <label for="jr-parent">Parent’s full name <span class="req" aria-hidden="true">*</span></label>
+              <input id="jr-parent" name="parent_name" type="text" autocomplete="name" required aria-describedby="jr-parent-error">
+              <p class="field__error" id="jr-parent-error"></p>
+            </div>
+            <div class="field">
+              <label for="jr-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="jr-email" name="email" type="email" autocomplete="email" required aria-describedby="jr-email-error">
+              <p class="field__error" id="jr-email-error"></p>
+            </div>
+            <div class="field">
+              <label for="jr-phone">Phone <span class="req" aria-hidden="true">*</span></label>
+              <input id="jr-phone" name="phone" type="tel" autocomplete="tel" required pattern="[0-9()+.\- ]{7,20}" aria-describedby="jr-phone-error">
+              <p class="field__error" id="jr-phone-error"></p>
+            </div>
+            <div class="field span-2">
+              <label for="jr-team">Full team?</label>
+              <select id="jr-team" name="full_team" aria-describedby="jr-team-error">
+                <option value="">Select…</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+              <p class="field__error" id="jr-team-error"></p>
+            </div>
+            <div class="field span-2">
+              <label for="jr-questions">Questions?</label>
+              <textarea id="jr-questions" name="questions" rows="4" aria-describedby="jr-questions-error"></textarea>
+              <p class="field__error" id="jr-questions-error"></p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn--primary" type="submit">Submit</button>
+          </div>
+          <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+        </form>
+      </div>
+    </section>
